@@ -41,12 +41,30 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const nav = document.querySelector("nav");
 const navA = document.querySelectorAll("nav a");
 const navArray = Object.values(siteContent.nav);
-// console.log(navArray);
+
 navA.forEach(function(currentValue, index){
    return currentValue.textContent = navArray[index];  
  });
+
+ navA.forEach(function(currentValue){
+  return currentValue.style.color = "blue";  
+});
+
+const appended = document.createElement('a');
+appended.textContent = "Appended";
+nav.appendChild(appended);
+appended.style.color = "red";
+
+const prepended = document.createElement('a');
+prepended.textContent = "Prepended"
+nav.prepend(prepended);
+prepended.style.color = "red";
+
+
+
 
 /*navA[0].textContent = "Services";
 navA[1].textContent = "Product";
