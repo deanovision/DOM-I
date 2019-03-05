@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+///////////////////////NAVIGATION////////////////////////////
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -63,54 +63,54 @@ prepended.textContent = "Prepended"
 nav.prepend(prepended);
 prepended.style.color = "red";
 
-
-
-
-/*navA[0].textContent = "Services";
-navA[1].textContent = "Product";
-navA[2].textContent = "Vision";
-navA[3].textContent = "Features";
-navA[4].textContent = "About";
-navA[5].textContent = "Contact";*/
-
+//////////////////////////////////////HEADER AREA///////////////////////////////
 
 const ctaText = document.querySelector(".cta-text h1");
-ctaText.textContent = "DOM Is Awesome";
+ctaText.textContent = siteContent["cta"]["h1"];
 
 const ctaImg = document.querySelector("#cta-img");
-ctaImg.src = "img/header-img.png";
+ctaImg.src = siteContent["cta"]["img-src"];
 
 const ctaButton = document.querySelector(".cta-text button");
-ctaButton.textContent = "Get Started";
+ctaButton.textContent = siteContent["cta"]["button"];
 
-const allH4 = document.querySelectorAll("h4");
-allH4[0].textContent = "Features";
-allH4[1].textContent = "About";
-allH4[2].textContent = "Services";
-allH4[3].textContent = "Product";
-allH4[4].textContent = "Vision";
-allH4[5].textContent = "Contact";
+//////////////////////////////////////MAIN CONTENT///////////////////////////////
+
+const mainContentH4 = document.querySelectorAll(".main-content h4");
+mainContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
 
 const topP = document.querySelectorAll(".top-content p");
-topP[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-topP[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+topP[0].textContent = siteContent["main-content"]["features-content"];
+topP[1].textContent = siteContent["main-content"]["about-content"];
+
+const midImg = document.getElementById("middle-img");
+midImg.src = siteContent["main-content"]["middle-img-src"];
 
 const bottomP = document.querySelectorAll(".bottom-content p");
 
-bottomP[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-bottomP[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
-bottomP[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+bottomP[0].textContent = siteContent["main-content"]["services-content"];
+bottomP[1].textContent = siteContent["main-content"]["product-content"];
+bottomP[2].textContent = siteContent["main-content"]["vision-content"];
 
-const midImg = document.getElementById("middle-img");
-midImg.src = "img/mid-page-accent.jpg"
+///////////////////////////////////////////// CONTACT AREA /////////////////////////////////
+
+const contactH4 = document.querySelector(".contact h4")
+contactH4.textContent = siteContent["contact"]["contact-h4"];
 
 const contact = document.querySelectorAll(".contact p");
-contact[0].textContent = "123 Way 456 Street Somewhere, USA"
-contact[1].textContent = "1 (888) 888-8888"
-contact[2].textContent = "sales@greatidea.io"
+contact[0].textContent = siteContent["contact"]["address"];
+contact[1].textContent = siteContent["contact"]["phone"];
+contact[2].textContent = siteContent["contact"]["email"];
+
+//////////////////////////////////////////// FOOTER AREA //////////////////////////////////
 
 const footer = document.querySelector("footer p");
-footer.textContent = "Copyright Great Idea! 2018"
+footer.textContent = siteContent["footer"]["copyright"];
 
 
 // console.log(allH4);
